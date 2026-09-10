@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VoyageVista premium travel and tourism website">
+  <title>Testimonials | WanderVista</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="testimonials">
+
+<header>
+  <nav class="navbar">
+    <a class="logo" href="index.html">Wander<span>Vista</span></a>
+
+    <ul class="nav-links">
+      <li><a href="index.html" data-page="home">Home</a></li>
+      <li><a href="about.html" data-page="about">About Us</a></li>
+      <li><a href="destinations.html" data-page="destinations">Destinations</a></li>
+      <li><a href="packages.html" data-page="packages">Tour Packages</a></li>
+      <li><a href="services.html" data-page="services">Services</a></li>
+      <li><a href="gallery.html" data-page="gallery">Gallery</a></li>
+      <li><a href="testimonials.html" data-page="testimonials">Testimonials</a></li>
+      <li><a href="contact.html" data-page="contact">Contact Us</a></li>
+    </ul>
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+    <a class="trip-btn" href="contact.html">Plan My Trip</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="page-banner testimonials-banner">
+  <video class="testimonials-hero-video"
+       autoplay
+       muted
+       loop
+       playsinline>
+
+    <source src="videos/testimonials.mp4"
+            type="video/mp4">
+
+</video>
+  <div><p>TRAVELER REVIEWS</p><h1>What Our <span>Travelers Say</span></h1></div>
+ 
+</section>
+
+<section class="testimonials-section">
+  <div class="section-heading"><span>TRAVELER REVIEWS</span><h2>What Our <span>Travelers Say</span></h2><p>Read real experiences from travelers who explored beautiful destinations with VoyageVista.</p></div>
+
+  <div class="testimonial-wrapper">
+    <button class="testimonial-arrow" id="prevBtn" type="button" aria-label="Previous testimonial">❮</button>
+    <article class="testimonial-card">
+      <div class="testimonial-top"><img id="testimonialImage" src="" alt="Traveler"><div><h3 id="testimonialName"></h3><p id="testimonialTrip"></p></div></div>
+      <div class="testimonial-rating" id="testimonialRating"></div>
+      <p class="testimonial-text" id="testimonialText"></p>
+    </article>
+    <button class="testimonial-arrow" id="nextBtn" type="button" aria-label="Next testimonial">❯</button>
+  </div>
+  <div class="testimonial-dots" id="testimonialDots"></div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-box">
+      <div class="footer-logo">Wander<span>Vista</span></div>
+      <p>Explore beautiful destinations and unforgettable travel experiences with premium holiday planning and trusted travel support.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="YouTube">▶</a>
+        <a href="#" aria-label="Instagram">◎</a>
+      </div>
+    </div>
+
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="packages.html">Tour Packages</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-box">
+      <h3>Destinations</h3>
+      <ul>
+        <li><a href="destinations.html">Maldives</a></li>
+        <li><a href="destinations.html">Bali</a></li>
+        <li><a href="destinations.html">Dubai</a></li>
+        <li><a href="destinations.html">Switzerland</a></li>
+        <li><a href="destinations.html">Paris</a></li>
+        <li><a href="destinations.html">Goa</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-box">
+      <h3>Contact Us</h3>
+      <div class="footer-contact">
+        <p>📍 Hyderabad, India</p>
+        <p>📞 +91 9059227935</p>
+        <p>✉ hello@WanderVista.com</p>
+      </div>
+
+      <div class="newsletter">
+        <h4>Subscribe Newsletter</h4>
+        <form class="newsletter-form">
+          <input type="email" class="newsletter-email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <small class="newsletter-message"></small>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 WanderVista. All Rights Reserved.</p>
+    <p>Designed with HTML, CSS & JavaScript</p>
+  </div>
+</footer>
+
+<button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>

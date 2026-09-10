@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VoyageVista premium travel and tourism website">
+  <title>Contact Us | WanderVista</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="contact">
+
+<header>
+  <nav class="navbar">
+    <a class="logo" href="index.html">Wander<span>Vista</span></a>
+
+    <ul class="nav-links">
+      <li><a href="index.html" data-page="home">Home</a></li>
+      <li><a href="about.html" data-page="about">About Us</a></li>
+      <li><a href="destinations.html" data-page="destinations">Destinations</a></li>
+      <li><a href="packages.html" data-page="packages">Tour Packages</a></li>
+      <li><a href="services.html" data-page="services">Services</a></li>
+      <li><a href="gallery.html" data-page="gallery">Gallery</a></li>
+      <li><a href="testimonials.html" data-page="testimonials">Testimonials</a></li>
+      <li><a href="contact.html" data-page="contact">Contact Us</a></li>
+    </ul>
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+    <a class="trip-btn" href="contact.html">Plan My Trip</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="page-banner contact-banner">
+  <video class="contact-hero-video"
+       autoplay
+       muted
+       loop
+       playsinline>
+
+    <source src="videos/contact.mp4"
+            type="video/mp4">
+
+</video>
+  <div><p>PLAN YOUR JOURNEY</p><h1>Book Your <span>Dream Trip</span></h1></div>
+ 
+</section>
+
+<section class="contact-section">
+  <div class="section-heading"><span>PLAN YOUR JOURNEY</span><h2>Book Your <span>Dream Trip</span></h2><p>Tell us your travel plans and our team will help you create the perfect vacation.</p></div>
+
+  <div class="contact-container">
+    <aside class="contact-info">
+      <h3>Start Your Journey With VoyageVista</h3>
+      <p>Our travel experts are ready to help you with destinations, packages, hotels and complete trip planning.</p>
+      <div class="contact-item"><div class="contact-icon">📍</div><div><h4>Location</h4><p>Hyderabad, India</p></div></div>
+      <div class="contact-item"><div class="contact-icon">📞</div><div><h4>Phone</h4><p>+91 98765 43210</p></div></div>
+      <div class="contact-item"><div class="contact-icon">✉️</div><div><h4>Email</h4><p>hello@voyagevista.com</p></div></div>
+    </aside>
+
+    <form class="booking-form" id="bookingForm" novalidate>
+      <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" placeholder="Enter your name"><small class="error" id="nameError"></small></div>
+      <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" placeholder="Enter your email"><small class="error" id="emailError"></small></div>
+      <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" placeholder="Enter phone number"><small class="error" id="phoneError"></small></div>
+
+      <div class="form-group">
+        <label for="destination">Destination</label>
+        <select id="destination">
+          <option value="">Select Destination</option>
+          <option>Maldives</option><option>Bali</option><option>Dubai</option><option>Switzerland</option><option>Paris</option><option>Goa</option>
+        </select>
+        <small class="error" id="destinationError"></small>
+      </div>
+
+      <div class="form-group"><label for="travelDate">Travel Date</label><input type="date" id="travelDate"><small class="error" id="dateError"></small></div>
+
+      <div class="form-group">
+        <label for="travelers">Travelers</label>
+        <select id="travelers">
+          <option value="">Select Travelers</option>
+          <option>1 Traveler</option><option>2 Travelers</option><option>3 Travelers</option><option>4 Travelers</option><option>5+ Travelers</option>
+        </select>
+      </div>
+
+      <div class="form-group full-width"><label for="message">Message</label><textarea id="message" placeholder="Tell us about your travel plan..."></textarea></div>
+      <button type="submit" class="submit-btn">Send Travel Request</button>
+    </form>
+  </div>
+</section>
+
+<div class="success-popup" id="successPopup" aria-hidden="true">
+  <div class="success-box">
+    <div class="success-icon">✓</div>
+    <h3>Request Submitted!</h3>
+    <p>Thank you. Our travel team will contact you soon.</p>
+    <button id="closeSuccess" type="button">Close</button>
+  </div>
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-box">
+      <div class="footer-logo">Wander<span>Vista</span></div>
+      <p>Explore beautiful destinations and unforgettable travel experiences with premium holiday planning and trusted travel support.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="YouTube">▶</a>
+        <a href="#" aria-label="Instagram">◎</a>
+      </div>
+    </div>
+
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="packages.html">Tour Packages</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-box">
+      <h3>Destinations</h3>
+      <ul>
+        <li><a href="destinations.html">Maldives</a></li>
+        <li><a href="destinations.html">Bali</a></li>
+        <li><a href="destinations.html">Dubai</a></li>
+        <li><a href="destinations.html">Switzerland</a></li>
+        <li><a href="destinations.html">Paris</a></li>
+        <li><a href="destinations.html">Goa</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-box">
+      <h3>Contact Us</h3>
+      <div class="footer-contact">
+        <p>📍 Hyderabad, India</p>
+        <p>📞 +91 9059227935</p>
+        <p>✉ hello@WandereVista.com</p>
+      </div>
+
+      <div class="newsletter">
+        <h4>Subscribe Newsletter</h4>
+        <form class="newsletter-form">
+          <input type="email" class="newsletter-email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <small class="newsletter-message"></small>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 WanderVista. All Rights Reserved.</p>
+    <p>Designed with HTML, CSS & JavaScript</p>
+  </div>
+</footer>
+
+<button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
