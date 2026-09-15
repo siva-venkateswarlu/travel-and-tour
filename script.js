@@ -673,31 +673,200 @@ function showTravelerReview(index){
 }
 
 
-travelerNext.addEventListener("click",()=>{
+// travelerNext.addEventListener("click",()=>{
 
-    travelerIndex++;
+//     travelerIndex++;
 
-    if(travelerIndex >= travelerReviews.length){
-        travelerIndex = 0;
-    }
+//     if(travelerIndex >= travelerReviews.length){
+//         travelerIndex = 0;
+//     }
+
+//     showTravelerReview(travelerIndex);
+
+// });
+
+
+// travelerPrev.addEventListener("click",()=>{
+
+//     travelerIndex--;
+
+//     if(travelerIndex < 0){
+//         travelerIndex =
+//             travelerReviews.length - 1;
+//     }
+
+//     showTravelerReview(travelerIndex);
+
+// });
+
+
+// showTravelerReview(travelerIndex);
+/* TRAVELLER STORIES - RUN ONLY WHEN ELEMENTS EXIST */
+
+if (
+    travelerNext &&
+    travelerPrev &&
+    travelerName &&
+    travelerType &&
+    travelerPlace &&
+    travelerImage &&
+    reviewMessage &&
+    reviewDestination &&
+    reviewStars &&
+    reviewCounter
+) {
+
+    travelerNext.addEventListener("click", () => {
+
+        travelerIndex++;
+
+        if (travelerIndex >= travelerReviews.length) {
+            travelerIndex = 0;
+        }
+
+        showTravelerReview(travelerIndex);
+    });
+
+
+    travelerPrev.addEventListener("click", () => {
+
+        travelerIndex--;
+
+        if (travelerIndex < 0) {
+            travelerIndex = travelerReviews.length - 1;
+        }
+
+        showTravelerReview(travelerIndex);
+    });
+
 
     showTravelerReview(travelerIndex);
+}
+/* =====================================
+   WANDERVISTA 8 SLIDE HERO CAROUSEL
+===================================== */
 
-});
+document.addEventListener("DOMContentLoaded", function () {
 
+    const heroSlides =
+        document.querySelectorAll(".hero-slider .hero-slide");
 
-travelerPrev.addEventListener("click",()=>{
+    const heroDots =
+        document.querySelectorAll(".hero-slider .hero-dot");
 
-    travelerIndex--;
+    const heroPrev =
+        document.querySelector(".hero-carousel-prev");
 
-    if(travelerIndex < 0){
-        travelerIndex =
-            travelerReviews.length - 1;
+    const heroNext =
+        document.querySelector(".hero-carousel-next");
+
+    // Stop if carousel is not available
+    if (!heroSlides.length || !heroPrev || !heroNext) {
+        return;
     }
 
-    showTravelerReview(travelerIndex);
+    let heroIndex = 0;
+    let heroAutoPlay;
+
+
+    function showHeroSlide(index) {
+
+        heroSlides.forEach(function (slide) {
+            slide.classList.remove("active");
+        });
+
+        heroDots.forEach(function (dot) {
+            dot.classList.remove("active");
+        });
+
+        heroSlides[index].classList.add("active");
+
+        if (heroDots[index]) {
+            heroDots[index].classList.add("active");
+        }
+    }
+
+
+    function nextHeroSlide() {
+
+        heroIndex++;
+
+        if (heroIndex >= heroSlides.length) {
+            heroIndex = 0;
+        }
+
+        showHeroSlide(heroIndex);
+    }
+
+
+    function previousHeroSlide() {
+
+        heroIndex--;
+
+        if (heroIndex < 0) {
+            heroIndex = heroSlides.length - 1;
+        }
+
+        showHeroSlide(heroIndex);
+    }
+
+
+    // NEXT BUTTON
+    heroNext.addEventListener("click", function () {
+
+        nextHeroSlide();
+        restartHeroAutoPlay();
+
+    });
+
+
+    // PREVIOUS BUTTON
+    heroPrev.addEventListener("click", function () {
+
+        previousHeroSlide();
+        restartHeroAutoPlay();
+
+    });
+
+
+    // DOT BUTTONS
+    heroDots.forEach(function (dot, index) {
+
+        dot.addEventListener("click", function () {
+
+            heroIndex = index;
+
+            showHeroSlide(heroIndex);
+
+            restartHeroAutoPlay();
+
+        });
+
+    });
+
+
+    // AUTO PLAY
+    function startHeroAutoPlay() {
+
+        heroAutoPlay = setInterval(function () {
+            nextHeroSlide();
+        }, 5000);
+
+    }
+
+
+    function restartHeroAutoPlay() {
+
+        clearInterval(heroAutoPlay);
+
+        startHeroAutoPlay();
+
+    }
+
+
+    // START CAROUSEL
+    showHeroSlide(heroIndex);
+
+    startHeroAutoPlay();
 
 });
-
-
-showTravelerReview(travelerIndex);
