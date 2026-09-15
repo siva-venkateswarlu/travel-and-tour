@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Testimonials
+//   // Testimonials
   const testimonials = [
     {
       name: "Ananya Sharma",
@@ -315,3 +315,389 @@ if (prevPage) {
     });
 
 }
+/* ============================================
+   WANDERVISTA STORY GALLERY
+============================================ */
+
+const storyFilters =
+    document.querySelectorAll(".story-filter");
+
+const storyCards =
+    document.querySelectorAll(".story-card");
+
+
+storyFilters.forEach(filter => {
+
+    filter.addEventListener("click", () => {
+
+        storyFilters.forEach(btn =>
+            btn.classList.remove("active")
+        );
+
+        filter.classList.add("active");
+
+        const category =
+            filter.dataset.filter;
+
+
+        storyCards.forEach(card => {
+
+            if (
+                category === "all" ||
+                card.dataset.category === category
+            ) {
+
+                card.classList.remove("gallery-hidden");
+
+            } else {
+
+                card.classList.add("gallery-hidden");
+
+            }
+
+        });
+
+    });
+
+});
+
+
+/* ============================================
+   LIGHTBOX
+============================================ */
+
+const lightbox =
+    document.getElementById("storyLightbox");
+
+const lightboxImage =
+    document.getElementById("lightboxImage");
+
+const lightboxTitle =
+    document.getElementById("lightboxTitle");
+
+const lightboxLocation =
+    document.getElementById("lightboxLocation");
+
+const lightboxDescription =
+    document.getElementById("lightboxDescription");
+
+const lightboxCounter =
+    document.getElementById("lightboxCounter");
+
+const lightboxClose =
+    document.getElementById("lightboxClose");
+
+const lightboxNext =
+    document.getElementById("lightboxNext");
+
+const lightboxPrev =
+    document.getElementById("lightboxPrev");
+
+
+let currentStory = 0;
+
+
+function openStory(index) {
+
+    currentStory = index;
+
+    const card = storyCards[currentStory];
+
+    const image =
+        card.querySelector(".story-image");
+
+    const title =
+        card.querySelector("h3");
+
+    const location =
+        card.querySelector(".story-content span");
+
+    const description =
+        card.querySelector(".story-content p");
+
+
+    lightboxImage.src = image.src;
+
+    lightboxTitle.textContent =
+        title.textContent;
+
+    lightboxLocation.textContent =
+        location.textContent;
+
+    lightboxDescription.textContent =
+        description.textContent;
+
+    lightboxCounter.textContent =
+        String(currentStory + 1).padStart(2, "0")
+        + " / " +
+        String(storyCards.length).padStart(2, "0");
+
+
+    lightbox.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+storyCards.forEach((card, index) => {
+
+    card.addEventListener("click", () => {
+
+        openStory(index);
+
+    });
+
+});
+
+
+/* =========================
+   GALLERY LIGHTBOX EVENTS
+========================= */
+
+if (
+    lightbox &&
+    lightboxClose &&
+    lightboxNext &&
+    lightboxPrev
+) {
+
+    lightboxClose.addEventListener("click", () => {
+
+        lightbox.classList.remove("active");
+
+        document.body.style.overflow = "";
+
+    });
+
+
+    lightboxNext.addEventListener("click", () => {
+
+        currentStory++;
+
+        if (currentStory >= storyCards.length) {
+            currentStory = 0;
+        }
+
+        openStory(currentStory);
+
+    });
+
+
+    lightboxPrev.addEventListener("click", () => {
+
+        currentStory--;
+
+        if (currentStory < 0) {
+            currentStory = storyCards.length - 1;
+        }
+
+        openStory(currentStory);
+
+    });
+
+
+    /* CLOSE WHEN CLICKING BACKGROUND */
+
+    lightbox.addEventListener("click", event => {
+
+        if (event.target === lightbox) {
+
+            lightbox.classList.remove("active");
+
+            document.body.style.overflow = "";
+
+        }
+
+    });
+
+
+    /* KEYBOARD */
+
+    document.addEventListener("keydown", event => {
+
+        if (!lightbox.classList.contains("active")) {
+            return;
+        }
+
+        if (event.key === "Escape") {
+
+            lightbox.classList.remove("active");
+
+            document.body.style.overflow = "";
+
+        }
+
+        if (event.key === "ArrowRight") {
+            lightboxNext.click();
+        }
+
+        if (event.key === "ArrowLeft") {
+            lightboxPrev.click();
+        }
+
+    });
+
+}
+/* =============================================
+   WANDERVISTA TRAVELLER STORIES SLIDER
+============================================= */
+
+const travelerReviews = [
+
+    {
+        name: "Ananya Sharma",
+        trip: "Couple Trip • 6 Days",
+        destination: "Maldives Luxury Escape",
+        place: "MALDIVES",
+        rating: "★★★★★",
+
+        image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=85",
+
+        message:
+        "WanderVista planned every detail of our Maldives trip perfectly. From the resort to airport transfers, everything felt smooth, comfortable and unforgettable."
+    },
+
+    {
+        name: "Rahul Verma",
+        trip: "Adventure Trip • 7 Days",
+        destination: "Bali Tropical Adventure",
+        place: "BALI",
+        rating: "★★★★★",
+
+        image:
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=85",
+
+        message:
+        "Our Bali journey was an amazing mix of adventure and relaxation. The stays, sightseeing and activities were organised beautifully."
+    },
+
+    {
+        name: "Priya Reddy",
+        trip: "European Holiday • 10 Days",
+        destination: "European Grand Tour",
+        place: "EUROPE",
+        rating: "★★★★★",
+
+        image:
+        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85",
+
+        message:
+        "Every city on our European journey felt special. WanderVista made the entire experience comfortable, organised and truly memorable."
+    },
+
+    {
+        name: "Arjun Mehta",
+        trip: "Family Trip • 5 Days",
+        destination: "Dubai Family Adventure",
+        place: "DUBAI",
+        rating: "★★★★★",
+
+        image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=85",
+
+        message:
+        "The Dubai trip was perfect for our family. Everything from hotel arrangements to activities was handled professionally."
+    }
+
+];
+
+
+const travelerName =
+document.getElementById("travelerName");
+
+const travelerType =
+document.getElementById("travelerType");
+
+const travelerPlace =
+document.getElementById("travelerPlace");
+
+const travelerImage =
+document.getElementById("travelerImage");
+
+const reviewMessage =
+document.getElementById("reviewMessage");
+
+const reviewDestination =
+document.getElementById("reviewDestination");
+
+const reviewStars =
+document.getElementById("reviewStars");
+
+const reviewCounter =
+document.getElementById("reviewCounter");
+
+const travelerPrev =
+document.getElementById("travelerPrev");
+
+const travelerNext =
+document.getElementById("travelerNext");
+
+
+let travelerIndex = 0;
+
+
+function showTravelerReview(index){
+
+    const review =
+        travelerReviews[index];
+
+    travelerName.textContent =
+        review.name;
+
+    travelerType.textContent =
+        review.trip;
+
+    travelerPlace.textContent =
+        review.place;
+
+    travelerImage.src =
+        review.image;
+
+    reviewMessage.textContent =
+        review.message;
+
+    reviewDestination.textContent =
+        review.destination;
+
+    reviewStars.textContent =
+        review.rating;
+
+    reviewCounter.textContent =
+        String(index + 1).padStart(2,"0")
+        +
+        " / "
+        +
+        String(travelerReviews.length).padStart(2,"0");
+}
+
+
+travelerNext.addEventListener("click",()=>{
+
+    travelerIndex++;
+
+    if(travelerIndex >= travelerReviews.length){
+        travelerIndex = 0;
+    }
+
+    showTravelerReview(travelerIndex);
+
+});
+
+
+travelerPrev.addEventListener("click",()=>{
+
+    travelerIndex--;
+
+    if(travelerIndex < 0){
+        travelerIndex =
+            travelerReviews.length - 1;
+    }
+
+    showTravelerReview(travelerIndex);
+
+});
+
+
+showTravelerReview(travelerIndex);

@@ -46,18 +46,384 @@
 
 </section>
 
-<section class="gallery-section">
-  <div class="section-heading"><span>TRAVEL GALLERY</span><h2>Discover Beautiful <span>Travel Moments</span></h2><p>Explore breathtaking destinations and memorable travel experiences from around the world.</p></div>
+<!-- ================= UNIQUE TRAVEL STORY GALLERY ================= -->
 
-  <div class="gallery-container">
-    <div class="gallery-card gallery-large"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=85" alt="Mountain adventure"><div class="gallery-overlay"><h3>Mountain Adventure</h3><p>Explore Nature</p></div></div>
-    <div class="gallery-card"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85" alt="Maldives"><div class="gallery-overlay"><h3>Tropical Paradise</h3><p>Maldives</p></div></div>
-    <div class="gallery-card"><img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=900&q=85" alt="Paris"><div class="gallery-overlay"><h3>City of Love</h3><p>Paris</p></div></div>
-    <div class="gallery-card"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=85" alt="Dubai"><div class="gallery-overlay"><h3>Luxury Journey</h3><p>Dubai</p></div></div>
-    <div class="gallery-card gallery-large"><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=85" alt="Bali"><div class="gallery-overlay"><h3>Island Escape</h3><p>Bali</p></div></div>
-    <div class="gallery-card"><img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=85" alt="Goa"><div class="gallery-overlay"><h3>Beach Holiday</h3><p>Goa</p></div></div>
-  </div>
+<section class="story-gallery">
+
+    <div class="story-gallery-heading">
+
+        <span class="story-label">WANDERVISTA JOURNAL</span>
+
+        <h2>
+            Stories From
+            <span>Around The World.</span>
+        </h2>
+
+        <p>
+            Every destination has a story. Explore peaceful beaches,
+            breathtaking mountains, vibrant cities and unforgettable
+            travel moments captured around the world.
+        </p>
+
+    </div>
+
+
+    <!-- CATEGORY FILTERS -->
+
+    <div class="story-filters">
+
+        <button class="story-filter active" data-filter="all">
+            All Stories
+        </button>
+
+        <button class="story-filter" data-filter="beach">
+            Beaches
+        </button>
+
+        <button class="story-filter" data-filter="mountain">
+            Mountains
+        </button>
+
+        <button class="story-filter" data-filter="city">
+            Cities
+        </button>
+
+        <button class="story-filter" data-filter="island">
+            Islands
+        </button>
+
+    </div>
+
+
+    <!-- ================= GALLERY GRID ================= -->
+
+    <div class="story-grid">
+
+
+        <!-- MALDIVES -->
+
+        <article class="story-card story-wide"
+                 data-category="beach">
+
+            <img
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=90"
+                alt="Maldives"
+                class="story-image">
+
+            <div class="story-number">
+                01 / COAST
+            </div>
+
+            <div class="story-content">
+
+                <span>INDIAN OCEAN</span>
+
+                <h3>Maldives</h3>
+
+                <p>
+                    Crystal-clear lagoons, peaceful island escapes
+                    and unforgettable sunsets.
+                </p>
+
+                <button class="story-open"
+                        type="button">
+                    Explore Story ↗
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- SWITZERLAND -->
+
+        <article class="story-card story-tall"
+                 data-category="mountain">
+
+            <img
+                src="https://images.unsplash.com/photo-1527668752968-14dc70a27c95?auto=format&fit=crop&w=1000&q=90"
+                alt="Swiss Alps"
+                class="story-image">
+
+            <div class="story-number">
+                02 / ALPINE
+            </div>
+
+            <div class="story-content">
+
+                <span>SWITZERLAND</span>
+
+                <h3>Swiss Alps</h3>
+
+                <p>
+                    Snow-covered peaks and breathtaking
+                    alpine landscapes.
+                </p>
+
+                <button class="story-open"
+                        type="button">
+                    Explore Story ↗
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- DUBAI -->
+
+        <article class="story-card"
+                 data-category="city">
+
+            <img
+                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1000&q=90"
+                alt="Dubai"
+                class="story-image">
+
+            <div class="story-number">
+                03 / CITY
+            </div>
+
+            <div class="story-content">
+
+                <span>UNITED ARAB EMIRATES</span>
+
+                <h3>Dubai</h3>
+
+                <p>
+                    Futuristic skylines, luxury experiences
+                    and desert adventures.
+                </p>
+
+                <button class="story-open"
+                        type="button">
+                    Explore Story ↗
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- BALI -->
+
+        <article class="story-card story-wide"
+                 data-category="island">
+
+            <img
+                src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=90"
+                alt="Bali"
+                class="story-image">
+
+            <div class="story-number">
+                04 / ISLAND
+            </div>
+
+            <div class="story-content">
+
+                <span>INDONESIA</span>
+
+                <h3>Bali</h3>
+
+                <p>
+                    Tropical landscapes, ancient temples
+                    and peaceful cultural experiences.
+                </p>
+
+                <button class="story-open"
+                        type="button">
+                    Explore Story ↗
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- PARIS -->
+
+        <article class="story-card"
+                 data-category="city">
+
+            <img
+                src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1000&q=90"
+                alt="Paris"
+                class="story-image">
+
+            <div class="story-number">
+                05 / CULTURE
+            </div>
+
+            <div class="story-content">
+
+                <span>FRANCE</span>
+
+                <h3>Paris</h3>
+
+                <p>
+                    Iconic landmarks, charming streets
+                    and timeless European elegance.
+                </p>
+
+                <button class="story-open"
+                        type="button">
+                    Explore Story ↗
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- GOA -->
+
+        <article class="story-card story-tall"
+                 data-category="beach">
+
+            <img
+                src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1000&q=90"
+                alt="Goa"
+                class="story-image">
+
+            <div class="story-number">
+                06 / BEACH
+            </div>
+
+            <div class="story-content">
+
+                <span>INDIA</span>
+
+                <h3>Goa</h3>
+
+                <p>
+                    Golden beaches, coastal adventures
+                    and vibrant tropical evenings.
+                </p>
+
+                <button class="story-open"
+                        type="button">
+                    Explore Story ↗
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
 </section>
+
+
+<!-- ================= TRAVEL STORY CONTENT ================= -->
+
+<section class="gallery-story-section">
+
+    <div class="gallery-story-title">
+
+        <span>MORE THAN PHOTOGRAPHS</span>
+
+        <h2>
+            Every Picture Holds
+            <strong>A Travel Story.</strong>
+        </h2>
+
+    </div>
+
+
+    <div class="gallery-story-text">
+
+        <p>
+            Travel is more than visiting a destination.
+            It is about discovering new cultures, meeting new
+            people and experiencing moments that stay with you
+            long after the journey ends.
+        </p>
+
+        <p>
+            From peaceful tropical beaches to spectacular
+            mountain landscapes and exciting city adventures,
+            WanderVista helps transform every journey into
+            a story worth remembering.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= GALLERY CTA ================= -->
+
+<section class="gallery-journey-cta">
+
+    <span>YOUR NEXT STORY STARTS HERE</span>
+
+    <h2>
+        Ready To Create Your
+        <strong>Own Travel Memories?</strong>
+    </h2>
+
+    <p>
+        Discover beautiful destinations and let WanderVista
+        create an unforgettable journey designed around you.
+    </p>
+
+    <a href="contact.html">
+        PLAN MY TRIP
+        <b>↗</b>
+    </a>
+
+</section>
+
+
+<!-- ================= LIGHTBOX ================= -->
+
+<div class="story-lightbox"
+     id="storyLightbox">
+
+    <button class="lightbox-close"
+            id="lightboxClose"
+            type="button">
+        ×
+    </button>
+
+    <button class="lightbox-prev"
+            id="lightboxPrev"
+            type="button">
+        ❮
+    </button>
+
+
+    <div class="lightbox-content">
+
+        <div class="lightbox-counter"
+             id="lightboxCounter">
+            01 / 06
+        </div>
+
+        <img id="lightboxImage"
+             src=""
+             alt="Travel Gallery">
+
+        <div class="lightbox-info">
+
+            <span id="lightboxLocation"></span>
+
+            <h2 id="lightboxTitle"></h2>
+
+            <p id="lightboxDescription"></p>
+
+        </div>
+
+    </div>
+
+
+    <button class="lightbox-next"
+            id="lightboxNext"
+            type="button">
+        ❯
+    </button>
+
+</div>
 </main>
 
 <footer class="footer">
