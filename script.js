@@ -101,6 +101,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const renderTestimonial = () => {
       const item = testimonials[index];
+      const testimonialCard =
+    document.querySelector(".testimonial-card");
+
+if (testimonialCard) {
+
+    testimonialCard.classList.remove(
+        "review-bg-1",
+        "review-bg-2",
+        "review-bg-3",
+        "review-bg-4"
+    );
+
+    testimonialCard.classList.add(
+        "review-bg-" + (index + 1)
+    );
+}
       image.src = item.image;
       image.alt = item.name;
       name.textContent = item.name;

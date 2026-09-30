@@ -4492,3 +4492,1053 @@ html {
         right: 8px;
     }
 }
+/* =====================================
+   DIFFERENT DESTINATION CARD COLORS
+===================================== */
+
+/* Bali */
+.destination-card:nth-child(1) .destination-content {
+    background: #fff4e6;
+}
+
+/* Maldives */
+.destination-card:nth-child(2) .destination-content {
+    background: #e8f8f7;
+}
+
+/* Dubai */
+.destination-card:nth-child(3) .destination-content {
+    background: #fff0e8;
+}
+
+/* Switzerland */
+.destination-card:nth-child(4) .destination-content {
+    background: #eef5ff;
+}
+
+/* Paris */
+.destination-card:nth-child(5) .destination-content {
+    background: #f9edff;
+}
+
+/* Goa */
+.destination-card:nth-child(6) .destination-content {
+    background: #f0f8e8;
+}
+/* =========================================
+   QUICK CONTACT STRIP PREMIUM ANIMATIONS
+========================================= */
+
+.quick-strip-item {
+    position: relative;
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        background-color 0.4s ease,
+        box-shadow 0.4s ease;
+
+    animation: quickStripFadeUp 0.8s ease both;
+}
+
+
+/* SHOW CARDS ONE BY ONE */
+
+.quick-strip-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.quick-strip-item:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.quick-strip-item:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+
+
+
+/* PERMANENT BACKGROUND COLORS */
+
+/* QUICK CALL */
+.quick-strip-item:nth-child(1) {
+    background: #eaf8f4;
+}
+
+/* WRITE TO US */
+.quick-strip-item:nth-child(2) {
+    background: #fff6e5;
+}
+
+/* VISIT US */
+.quick-strip-item:nth-child(3) {
+    background: #f2efff;
+}
+
+
+/* CARD LIFT */
+
+.quick-strip-item:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.08);
+}
+
+
+/* 01 / 02 / 03 */
+
+.quick-strip-item > span {
+    display: inline-block;
+
+    transition:
+        transform 0.4s ease,
+        color 0.4s ease;
+}
+
+.quick-strip-item:hover > span {
+    transform: scale(1.25) rotate(-5deg);
+    color: #dfa62f;
+}
+
+
+/* QUICK CALL / WRITE TO US / VISIT US */
+
+.quick-strip-item small {
+    display: inline-block;
+
+    transition:
+        color 0.4s ease,
+        letter-spacing 0.4s ease;
+}
+
+.quick-strip-item:hover small {
+    color: #0b7a75;
+    letter-spacing: 4px;
+}
+
+
+/* PHONE / EMAIL / LOCATION */
+
+.quick-strip-item h3 {
+    transition:
+        transform 0.4s ease,
+        color 0.4s ease;
+}
+
+.quick-strip-item:hover h3 {
+    transform: translateX(8px);
+    color: #0b7a75;
+}
+
+
+/* ANIMATED BOTTOM LINE */
+
+.quick-strip-item::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        #0b7a75,
+        #dfa62f
+    );
+
+    transition: width 0.5s ease;
+}
+
+.quick-strip-item:hover::after {
+    width: 100%;
+}
+
+
+/* LIGHT SHINE EFFECT */
+
+.quick-strip-item::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -120%;
+
+    width: 60%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.7),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.7s ease;
+
+    pointer-events: none;
+}
+
+.quick-strip-item:hover::before {
+    left: 140%;
+}
+
+
+/* PAGE LOAD ANIMATION */
+
+@keyframes quickStripFadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* =========================================
+   JOURNEY FORM - DIFFERENT HEADING COLORS
+========================================= */
+
+/* FULL NAME */
+.journey-field label[for="name"] {
+    color: #0b7a75;
+}
+
+/* PHONE */
+.journey-field label[for="phone"] {
+    color: #d99b24;
+}
+
+/* EMAIL ADDRESS */
+.journey-field label[for="email"] {
+    color: #8e44ad;
+}
+
+/* DESTINATION */
+.journey-field label[for="destination"] {
+    color: #2874a6;
+}
+
+/* DEPARTURE */
+.journey-field label[for="travelDate"] {
+    color: #e67e22;
+}
+
+/* TRAVELLERS */
+.journey-field label[for="travelers"] {
+    color: #239b56;
+}
+
+/* TRIP STYLE */
+.journey-field label[for="tripStyle"] {
+    color: #c0392b;
+}
+
+/* YOUR TRAVEL IDEA */
+.journey-field label[for="message"] {
+    color: #6c5ce7;
+}
+/* =========================================
+   CONTACT HERO - DIFFERENT TEXT ANIMATIONS
+========================================= */
+
+/* PLAN YOUR JOURNEY */
+.contact-banner p {
+    animation: contactTitleDown 0.9s ease-out both;
+}
+
+/* COMPLETE HEADING */
+.contact-banner h1 {
+    animation: contactHeadingLeft 1s ease-out 0.2s both;
+}
+
+/* GOLD TEXT - DREAM TRIP */
+.contact-banner h1 span {
+    display: inline-block;
+
+    animation:
+        contactGoldRight 1.1s ease-out 0.4s both,
+        contactGoldGlow 2.5s ease-in-out 1.5s infinite alternate;
+}
+
+
+/* 1. SMALL TITLE - TOP TO BOTTOM */
+
+@keyframes contactTitleDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-35px);
+        letter-spacing: 8px;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 3px;
+    }
+}
+
+
+/* 2. BOOK YOUR - LEFT TO RIGHT */
+
+@keyframes contactHeadingLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* 3. DREAM TRIP - RIGHT TO LEFT */
+
+@keyframes contactGoldRight {
+
+    from {
+        opacity: 0;
+        transform: translateX(90px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+
+/* 4. GOLD TEXT GLOW */
+
+@keyframes contactGoldGlow {
+
+    from {
+        text-shadow:
+            0 0 0 rgba(224, 166, 46, 0);
+    }
+
+    to {
+        text-shadow:
+            0 0 12px rgba(224, 166, 46, 0.45),
+            0 0 28px rgba(224, 166, 46, 0.20);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .contact-banner h1 {
+        font-size: 42px;
+        line-height: 1.1;
+    }
+
+    .contact-banner p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .contact-banner h1 {
+        font-size: 32px;
+    }
+
+    .contact-banner h1 span {
+        display: inline;
+    }
+}
+/* =========================================
+   PREMIUM LUXURY GALLERY
+========================================= */
+
+.gallery-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    cursor: pointer;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+/* IMAGE */
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition:
+        transform 0.8s cubic-bezier(.2,.7,.2,1),
+        filter 0.6s ease;
+}
+
+
+/* PREMIUM DARK GRADIENT */
+
+.gallery-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(5, 24, 22, 0.85) 0%,
+            rgba(5, 24, 22, 0.20) 48%,
+            transparent 75%
+        );
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* GOLD BORDER */
+
+.gallery-card::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+
+    border: 1px solid rgba(231, 176, 67, 0);
+    border-radius: 20px;
+
+    z-index: 3;
+    pointer-events: none;
+
+    transition: 0.5s ease;
+}
+
+
+/* CONTENT */
+
+.gallery-overlay {
+    position: absolute;
+    left: 35px;
+    right: 35px;
+    bottom: 30px;
+
+    z-index: 4;
+
+    transform: translateY(12px);
+    transition: transform 0.5s ease;
+}
+
+
+.gallery-overlay h3 {
+    margin: 0 0 8px;
+
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+
+    transition: color 0.4s ease;
+}
+
+
+.gallery-overlay p {
+    margin: 0;
+
+    color: rgba(255,255,255,0.85);
+    font-size: 16px;
+
+    transition:
+        color 0.4s ease,
+        letter-spacing 0.4s ease;
+}
+
+
+/* HOVER */
+
+.gallery-card:hover {
+    transform: translateY(-12px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.18);
+}
+
+
+.gallery-card:hover img {
+    transform: scale(1.09);
+    filter: brightness(0.85) saturate(1.15);
+}
+
+
+.gallery-card:hover::before {
+    border-color: rgba(231,176,67,0.85);
+}
+
+
+.gallery-card:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+
+.gallery-card:hover .gallery-overlay h3 {
+    color: #e7b043;
+}
+
+
+.gallery-card:hover .gallery-overlay p {
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+
+/* GOLD DECORATIVE LINE */
+
+.gallery-overlay h3::after {
+    content: "";
+
+    display: block;
+
+    width: 0;
+    height: 2px;
+
+    margin-top: 10px;
+
+    background: #e7b043;
+
+    transition: width 0.5s ease;
+}
+
+
+.gallery-card:hover .gallery-overlay h3::after {
+    width: 55px;
+}
+
+
+/* PREMIUM ENTRANCE */
+
+.gallery-card {
+    animation: premiumGalleryReveal 0.8s ease both;
+}
+
+.gallery-card:nth-child(2) {
+    animation-delay: 0.12s;
+}
+
+.gallery-card:nth-child(3) {
+    animation-delay: 0.24s;
+}
+
+.gallery-card:nth-child(4) {
+    animation-delay: 0.36s;
+}
+
+.gallery-card:nth-child(5) {
+    animation-delay: 0.48s;
+}
+
+.gallery-card:nth-child(6) {
+    animation-delay: 0.60s;
+}
+
+
+@keyframes premiumGalleryReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(45px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .gallery-card {
+        border-radius: 22px;
+    }
+
+    .gallery-overlay {
+        left: 25px;
+        bottom: 25px;
+    }
+
+    .gallery-overlay h3 {
+        font-size: 23px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .gallery-card {
+        border-radius: 18px;
+    }
+
+    .gallery-overlay {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .gallery-overlay h3 {
+        font-size: 21px;
+    }
+
+    .gallery-overlay p {
+        font-size: 14px;
+    }
+
+    .gallery-card::before {
+        inset: 8px;
+        border-radius: 14px;
+    }
+}
+
+
+/* =========================================
+   FULL PACKAGE CARD BACKGROUND COLORS
+========================================= */
+
+.package-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Make content fill remaining card height */
+.package-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Push price + button toward bottom */
+.package-footer {
+    margin-top: auto;
+}
+
+
+/* MALDIVES */
+.package-card:nth-child(1),
+.package-card:nth-child(1) .package-content,
+.package-card:nth-child(1) .package-footer {
+    background: linear-gradient(
+        135deg,
+        #d8fbff,
+        #b9f3f1
+    );
+}
+
+
+/* BALI */
+.package-card:nth-child(2),
+.package-card:nth-child(2) .package-content,
+.package-card:nth-child(2) .package-footer {
+    background: linear-gradient(
+        135deg,
+        #fff8d6,
+        #ffe59d
+    );
+}
+
+
+/* EUROPE */
+.package-card:nth-child(3),
+.package-card:nth-child(3) .package-content,
+.package-card:nth-child(3) .package-footer {
+    background: linear-gradient(
+        135deg,
+        #f2e8ff,
+        #dccaff
+    );
+}
+
+
+/* KEEP CARD ROUNDED */
+
+.package-card {
+    overflow: hidden;
+    border-radius: 28px;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* PREMIUM HOVER */
+
+.package-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 22px 50px rgba(0, 0, 0, 0.14);
+}
+
+
+/* PACKAGE DETAILS SMALL BOXES */
+
+.package-card:nth-child(1) .package-details span {
+    background: #b9f2ee;
+}
+
+.package-card:nth-child(2) .package-details span {
+    background: #ffe59a;
+}
+
+.package-card:nth-child(3) .package-details span {
+    background: #d9c7ff;
+}
+
+
+/* COUNTRY TEXT */
+
+.package-card:nth-child(1) .package-location {
+    color: #007f86;
+}
+
+.package-card:nth-child(2) .package-location {
+    color: #b86b00;
+}
+
+.package-card:nth-child(3) .package-location {
+    color: #6842a8;
+}
+/* =====================================
+   TESTIMONIAL DIFFERENT BACKGROUNDS
+===================================== */
+
+.testimonial-card {
+    transition:
+        background 0.5s ease,
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* REVIEW 1 */
+.testimonial-card.review-bg-1 {
+    background: linear-gradient(
+        135deg,
+        #dffbf7,
+        #bff3eb
+    );
+}
+
+/* REVIEW 2 */
+.testimonial-card.review-bg-2 {
+    background: linear-gradient(
+        135deg,
+        #fff8d8,
+        #ffe8a8
+    );
+}
+
+/* REVIEW 3 */
+.testimonial-card.review-bg-3 {
+    background: linear-gradient(
+        135deg,
+        #f3e8ff,
+        #dfccff
+    );
+}
+
+/* REVIEW 4 */
+.testimonial-card.review-bg-4 {
+    background: linear-gradient(
+        135deg,
+        #fff0e8,
+        #ffd3bd
+    );
+}
+
+/* PREMIUM HOVER */
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.10);
+}
+/* =====================================
+   TESTIMONIAL DIFFERENT COLORS
+===================================== */
+
+.testimonial-card {
+    transition:
+        background 0.5s ease,
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* ANANYA - AQUA */
+.testimonial-card.review-bg-1 {
+    background: linear-gradient(
+        135deg,
+        #d9fff8,
+        #aef3e7
+    );
+}
+
+/* RAHUL - YELLOW */
+.testimonial-card.review-bg-2 {
+    background: linear-gradient(
+        135deg,
+        #fff8cf,
+        #ffe49b
+    );
+}
+
+/* PRIYA - LAVENDER */
+.testimonial-card.review-bg-3 {
+    background: linear-gradient(
+        135deg,
+        #f3e4ff,
+        #d9bdff
+    );
+}
+
+/* ARJUN - PEACH */
+.testimonial-card.review-bg-4 {
+    background: linear-gradient(
+        135deg,
+        #fff0e5,
+        #ffcbb5
+    );
+}
+/* =========================================
+   BRIGHT COLORS FOR CONTACT FORM HEADINGS
+========================================= */
+
+/* FULL NAME */
+.booking-form label[for="name"] {
+    color: #00a896 !important;
+}
+
+/* EMAIL ADDRESS */
+.booking-form label[for="email"] {
+    color: #7b2cbf !important;
+}
+
+/* PHONE NUMBER */
+.booking-form label[for="phone"] {
+    color: #ff7b00 !important;
+}
+
+/* DESTINATION */
+.booking-form label[for="destination"] {
+    color: #0077b6 !important;
+}
+
+/* TRAVEL DATE */
+.booking-form label[for="travelDate"] {
+    color: #e63946 !important;
+}
+
+/* TRAVELERS */
+.booking-form label[for="travelers"] {
+    color: #2d9d4b !important;
+}
+
+/* MESSAGE */
+.booking-form label[for="message"] {
+    color: #d0006f !important;
+}
+/* =========================================
+   DIFFERENT COLORS FOR EACH REVIEW CARD
+========================================= */
+
+/* Rahul Verma - Light Aqua */
+.mini-review-card:nth-child(1) {
+    background: linear-gradient(135deg, #d9fff7, #b8f3e5) !important;
+}
+
+/* Priya Reddy - Light Yellow */
+.mini-review-card:nth-child(2) {
+    background: linear-gradient(135deg, #fff6c7, #ffe49a) !important;
+}
+
+/* Arjun Mehta - Light Lavender */
+.mini-review-card:nth-child(3) {
+    background: linear-gradient(135deg, #f1e3ff, #d9bfff) !important;
+}
+
+/* Hover effect */
+.mini-review-card {
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+.mini-review-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+/* ================= LOCATION MAP ================= */
+
+.location-map-section {
+  padding: 80px 6%;
+  background: #f8f5ef;
+}
+
+.location-map-heading {
+  max-width: 700px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.location-map-heading span {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #c49443;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.location-map-heading h2 {
+  margin-bottom: 12px;
+  color: #172234;
+  font-size: clamp(32px, 5vw, 50px);
+}
+
+.location-map-heading p {
+  color: #666;
+  font-size: 16px;
+}
+
+.location-map-container {
+  max-width: 1200px;
+  height: 450px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+}
+
+.location-map-container iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+  .location-map-section {
+    padding: 65px 5%;
+  }
+
+  .location-map-container {
+    height: 380px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+  .location-map-section {
+    padding: 50px 20px;
+  }
+
+  .location-map-container {
+    height: 300px;
+    border-radius: 16px;
+  }
+}
+/* ================= WEBSITE FONTS ================= */
+
+/* Normal website text */
+
+body,
+p,
+a,
+button,
+input,
+select,
+textarea,
+label,
+small {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Main headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+
+/* Navbar */
+
+.navbar,
+.navbar a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+/* WanderVista logo */
+
+.logo,
+.footer-logo {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Hero and banner headings */
+
+.page-banner h1,
+.contact-banner h1,
+.journey-contact-heading h2,
+.location-map-heading h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Buttons */
+
+.trip-btn,
+.journey-submit-btn,
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Small uppercase titles */
+
+.journey-contact-heading > span,
+.location-map-heading > span,
+.journey-contact-details > span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
