@@ -580,7 +580,7 @@ const travelerReviews = [
         trip: "Adventure Trip • 7 Days",
         destination: "Bali Tropical Adventure",
         place: "BALI",
-        rating: "★★★★★",
+        rating: "★★★★",
 
         image:
         "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=85",
@@ -608,7 +608,7 @@ const travelerReviews = [
         trip: "Family Trip • 5 Days",
         destination: "Dubai Family Adventure",
         place: "DUBAI",
-        rating: "★★★★★",
+        rating: "★★★★",
 
         image:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=85",
