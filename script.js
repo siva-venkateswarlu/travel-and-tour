@@ -216,12 +216,63 @@ if (testimonialCard) {
         }
       }
 
-      if (valid) {
+     if (valid) {
+
+    const travelersInput = document.getElementById("travelers");
+    const tripStyleInput = document.getElementById("tripStyle");
+    const messageInput = document.getElementById("message");
+
+    const bookingData = {
+        name: nameInput.value.trim(),
+        email: emailInput.value.trim(),
+        phone: phoneInput.value.trim(),
+        destination: destinationInput.value,
+        travelDate: dateInput.value,
+        travelers: Number(travelersInput.value),
+        tripStyle: tripStyleInput.value,
+        message: messageInput.value.trim()
+    };
+
+    fetch("http://localhost:8080/api/bookings", {
+
+        method: "POST",
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify(bookingData)
+
+    })
+    .then(response => {
+
+        if (!response.ok) {
+            throw new Error("Booking request failed");
+        }
+
+        return response.json();
+
+    })
+    .then(data => {
+
+        console.log("Booking saved:", data);
+
         const popup = document.getElementById("successPopup");
+
         popup?.classList.add("show");
         popup?.setAttribute("aria-hidden", "false");
+
         bookingForm.reset();
-      }
+
+    })
+    .catch(error => {
+
+        console.error("Booking error:", error);
+
+        alert("Unable to submit your request. Please try again.");
+
+    });
+}
     });
 
     const closeSuccess = document.getElementById("closeSuccess");

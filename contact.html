@@ -15,6 +15,8 @@
       rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body data-page="contact">
 
@@ -34,7 +36,7 @@
     </ul>
 
     <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
-    <a class="trip-btn" href="contact.html">Plan My Trip</a>
+    <a class="trip-btn" href="packages.html">Plan My Trip</a>
   </nav>
 </header>
 
@@ -302,11 +304,11 @@
                 Number of travellers
               </option>
 
-              <option>1 Traveler</option>
-              <option>2 Travelers</option>
-              <option>3 Travelers</option>
-              <option>4 Travelers</option>
-              <option>5+ Travelers</option>
+              <option value="1">1 Traveler</option>
+              <option value="2">2 Travelers</option>
+              <option value="3">3 Travelers</option>
+              <option value="4">4 Travelers</option>
+              <option value="5">5+ Travelers</option>
 
             </select>
 
@@ -435,7 +437,7 @@
 
   <div class="location-map-container">
     <iframe
-      src="https://www.google.com/maps?q=KPHB+Road+No+3+Hyderabad+Telangana&output=embed"
+       src="https://www.google.com/maps?q=KPHB+Road+No+3+Hyderabad+Telangana&output=embed"
       loading="lazy"
       allowfullscreen
       referrerpolicy="no-referrer-when-downgrade"
@@ -464,12 +466,37 @@
     <div class="footer-box">
       <div class="footer-logo">Wander<span>Vista</span></div>
       <p>Explore beautiful destinations and unforgettable travel experiences with premium holiday planning and trusted travel support.</p>
-      <div class="social-links">
-        <a href="#" aria-label="Facebook">f</a>
-        <a href="#" aria-label="LinkedIn">in</a>
-        <a href="#" aria-label="YouTube">▶</a>
-        <a href="#" aria-label="Instagram">◎</a>
-      </div>
+       <div class="social-links">
+
+    <a href="https://www.facebook.com/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <a href="https://www.instagram.com/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://www.youtube.com/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="YouTube">
+        <i class="fa-brands fa-youtube"></i>
+    </a>
+
+</div>
     </div>
 
     <div class="footer-box">
@@ -517,6 +544,10 @@
 
   <div class="footer-bottom">
     <p>© 2026 WanderVista. All Rights Reserved.</p>
+    <div class="footer-legal-links">
+     <a href="privacy.html">Privacy Policy</a>
+     <a href="terms.html">Terms & Conditions</a>
+    </div>
     <p>Designed with HTML, CSS & JavaScript</p>
   </div>
 </footer>
