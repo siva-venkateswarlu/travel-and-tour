@@ -5931,3 +5931,1731 @@ button {
         transition: none;
     }
 }
+
+/* =====================================
+   WANDERVISTA COLORFUL LEGAL HEADINGS
+===================================== */
+
+.legal-card .legal-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    margin: 30px 0 15px;
+
+    border-radius: 12px;
+    border-left: 5px solid currentColor;
+
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.5;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* DIFFERENT COLORS */
+
+.legal-card .legal-heading.blue {
+    color: #1565c0;
+    background: #eaf3ff;
+}
+
+.legal-card .legal-heading.purple {
+    color: #7b1fa2;
+    background: #f5e9ff;
+}
+
+.legal-card .legal-heading.green {
+    color: #16803c;
+    background: #e8f8ed;
+}
+
+.legal-card .legal-heading.orange {
+    color: #b45309;
+    background: #fff2df;
+}
+
+.legal-card .legal-heading.pink {
+    color: #be185d;
+    background: #fce7f3;
+}
+
+.legal-card .legal-heading.teal {
+    color: #0f766e;
+    background: #e2f7f4;
+}
+
+/* HOVER ANIMATION */
+
+@media (hover: hover) {
+    .legal-card .legal-heading:hover {
+        transform: translateX(5px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+}
+
+/* TABLET VIEW */
+
+@media (max-width: 768px) {
+    .legal-card .legal-heading {
+        font-size: 18px;
+        padding: 14px 16px;
+        gap: 10px;
+    }
+}
+
+/* MOBILE VIEW */
+
+@media (max-width: 480px) {
+    .legal-card .legal-heading {
+        font-size: 16px;
+        padding: 12px 14px;
+        margin: 22px 0 12px;
+        gap: 8px;
+        border-left-width: 4px;
+        overflow-wrap: anywhere;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .legal-card .legal-heading {
+        transition: none;
+    }
+
+    .legal-card .legal-heading:hover {
+        transform: none;
+    }
+}
+/* SHOW PLAN MY TRIP BUTTON ON MOBILE */
+
+@media (max-width: 768px) {
+
+    .trip-btn {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+
+        padding: 10px 14px;
+        min-height: 42px;
+
+        background: #d4af37;
+        color: #111111;
+
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 700;
+        white-space: nowrap;
+
+        position: relative;
+        z-index: 1001;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* SMALL MOBILE SCREENS */
+
+@media (max-width: 480px) {
+
+    .trip-btn {
+        padding: 9px 11px;
+        font-size: 11px;
+        min-height: 40px;
+    }
+}
+
+/* =========================================
+   MATCH CONTENT COLORS WITH LEGAL HEADINGS
+   PRIVACY POLICY + TERMS & CONDITIONS
+========================================= */
+
+/* BLUE */
+.legal-card .legal-section.blue {
+    --content-color: #285b8f;
+}
+
+/* PURPLE */
+.legal-card .legal-section.purple {
+    --content-color: #70428c;
+}
+
+/* GREEN */
+.legal-card .legal-section.green {
+    --content-color: #287448;
+}
+
+/* ORANGE */
+.legal-card .legal-section.orange {
+    --content-color: #96531b;
+}
+
+/* PINK */
+.legal-card .legal-section.pink {
+    --content-color: #a63869;
+}
+
+/* TEAL */
+.legal-card .legal-section.teal {
+    --content-color: #236f6a;
+}
+
+/* ALL SECTION CONTENT */
+.legal-card .legal-section p,
+.legal-card .legal-section li,
+.legal-card .legal-section ul,
+.legal-card .legal-section ol {
+    color: var(--content-color);
+}
+
+/* CONTENT STYLING */
+.legal-card .legal-section p,
+.legal-card .legal-section li {
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+/* SECTION SPACING */
+.legal-card .legal-section {
+    margin-bottom: 30px;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+    .legal-card .legal-section p,
+    .legal-card .legal-section li {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+}
+
+/* =====================================
+   WANDERVISTA PACKAGE DETAILS PAGE
+===================================== */
+
+.package-detail-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    font-family: Arial, sans-serif;
+}
+
+.detail-back {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #0c5660;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.detail-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    background: #f4fbfb;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.detail-hero img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.detail-intro {
+    padding: 30px;
+}
+
+.detail-intro span {
+    color: #0a888b;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.detail-intro h1 {
+    font-size: clamp(28px, 4vw, 42px);
+    color: #092d36;
+    margin: 15px 0;
+}
+
+.detail-intro h2 {
+    color: #087a61;
+    margin-top: 20px;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.detail-card {
+    background: #ffffff;
+    border: 1px solid #e0ebeb;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-5px);
+}
+
+.detail-card h2 {
+    font-size: 21px;
+    color: #0b4652;
+    margin-bottom: 15px;
+}
+
+.detail-card p,
+.detail-card li {
+    color: #53646b;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.detail-card ul {
+    padding-left: 20px;
+}
+
+.detail-disclaimer {
+    margin-top: 25px;
+    color: #68777d;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.detail-action {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.detail-book-btn {
+    display: inline-block;
+    background: #dda83e;
+    color: #10272b;
+    padding: 16px 35px;
+    border-radius: 35px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background 0.3s ease;
+}
+
+.detail-book-btn:hover {
+    background: #f0c66d;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .detail-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .package-detail-page {
+        padding: 25px 15px 50px;
+    }
+
+    .detail-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-hero img {
+        height: 230px;
+    }
+
+    .detail-intro {
+        padding: 22px;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .detail-card {
+        padding: 20px;
+    }
+
+    .detail-book-btn {
+        width: 100%;
+        max-width: 340px;
+        text-align: center;
+    }
+}
+
+/* ============================================
+   WANDERVISTA - PREMIUM ANIMATED PACKAGE CARDS
+============================================ */
+
+.wv-animated-card {
+    --wv-card-bg: #d1f7f8;
+    --wv-glow: #00bfc7;
+
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    background: var(--wv-card-bg);
+    border: 1px solid transparent;
+    border-radius: 30px;
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.07);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+
+    animation: wvCardFloat 6s ease-in-out infinite;
+}
+
+/* UNIQUE CARD COLORS */
+
+.wv-animated-card.wv-aqua {
+    --wv-card-bg: #d1f7f8;
+    --wv-glow: #00bfc7;
+}
+
+.wv-animated-card.wv-sunshine {
+    --wv-card-bg: #fff0ba;
+    --wv-glow: #f5a400;
+}
+
+.wv-animated-card.wv-lavender {
+    --wv-card-bg: #e9dcff;
+    --wv-glow: #a26aff;
+}
+
+.wv-animated-card.wv-mint {
+    --wv-card-bg: #ddf8e9;
+    --wv-glow: #22b573;
+}
+
+.wv-animated-card.wv-peach {
+    --wv-card-bg: #ffe5d8;
+    --wv-glow: #f48c66;
+}
+
+.wv-animated-card.wv-sky {
+    --wv-card-bg: #deecff;
+    --wv-glow: #508ef0;
+}
+
+/* FLOATING ANIMATION */
+
+@keyframes wvCardFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+/* DIFFERENT FLOAT TIMINGS */
+
+.wv-animated-card:nth-child(2) {
+    animation-delay: -2s;
+}
+
+.wv-animated-card:nth-child(3) {
+    animation-delay: -4s;
+}
+
+/* ANIMATED GLOW BORDER */
+
+.wv-animated-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+
+    border: 2px solid transparent;
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            var(--wv-glow),
+            transparent
+        ) border-box;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.wv-animated-card:hover::before {
+    opacity: 1;
+    animation: wvGlowPulse 2s ease-in-out infinite;
+}
+
+@keyframes wvGlowPulse {
+    0%, 100% {
+        filter: brightness(1);
+        opacity: 0.55;
+    }
+
+    50% {
+        filter: brightness(1.5);
+        opacity: 1;
+    }
+}
+
+/* CARD HOVER ELEVATION */
+
+.wv-animated-card:hover {
+    animation-play-state: paused;
+    transform: translateY(-12px) scale(1.015);
+
+    border-color: var(--wv-glow);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.12),
+        0 0 24px var(--wv-glow);
+}
+
+/* IMAGE ZOOM */
+
+.wv-animated-card img {
+    transition: transform 0.6s ease;
+}
+
+.wv-animated-card:hover img {
+    transform: scale(1.05);
+}
+
+/* FLOATING ICONS INSIDE BADGES */
+
+.wv-animated-card .wv-floating-icon {
+    display: inline-block;
+    animation: wvIconFloat 2.5s ease-in-out infinite;
+}
+
+@keyframes wvIconFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-4px) rotate(7deg);
+    }
+}
+
+/* BUTTON GLOW */
+
+.wv-animated-card .book-btn {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.wv-animated-card .book-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(214, 157, 41, 0.45);
+    background: #f3bb48;
+}
+
+/* TABLET AND MOBILE */
+
+@media (max-width: 768px) {
+
+    .wv-animated-card {
+        animation: none;
+        border-radius: 22px;
+    }
+
+    .wv-animated-card:hover {
+        transform: none;
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+    }
+
+    .wv-animated-card .book-btn {
+        min-height: 44px;
+    }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .wv-animated-card,
+    .wv-animated-card::before,
+    .wv-animated-card img,
+    .wv-animated-card .wv-floating-icon {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* =========================================
+   WANDERVISTA - NEW FAMILY PACKAGE THEMES
+========================================= */
+
+.wv-animated-card.wv-singapore {
+    --wv-card-bg: #d5f7ff;
+    --wv-glow: #00a9d6;
+}
+
+.wv-animated-card.wv-dubai {
+    --wv-card-bg: #fff0c4;
+    --wv-glow: #e6a328;
+}
+
+.wv-animated-card.wv-kerala {
+    --wv-card-bg: #e3f8e5;
+    --wv-glow: #28a765;
+}
+
+/* FLOATING PACKAGE CARDS */
+
+.wv-animated-card {
+    position: relative;
+    isolation: isolate;
+    border-radius: 28px;
+    border: 2px solid transparent;
+    background: var(--wv-card-bg);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+
+    animation: wvCardFloat 6s ease-in-out infinite;
+
+    transition:
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+@keyframes wvCardFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* GLOW BORDER ANIMATION */
+
+.wv-animated-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 2px solid var(--wv-glow);
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0;
+}
+
+@keyframes wvBorderGlow {
+    0%, 100% {
+        opacity: 0.45;
+        box-shadow: 0 0 8px var(--wv-glow);
+    }
+
+    50% {
+        opacity: 1;
+        box-shadow:
+            0 0 18px var(--wv-glow),
+            0 0 30px var(--wv-glow);
+    }
+}
+
+/* DESKTOP HOVER */
+
+@media (hover: hover) {
+    .wv-animated-card:hover {
+        animation-play-state: paused;
+        border-color: var(--wv-glow);
+
+        box-shadow:
+            0 20px 45px rgba(0,0,0,0.13),
+            0 0 25px var(--wv-glow);
+    }
+
+    .wv-animated-card:hover::before {
+        animation: wvBorderGlow 1.8s ease-in-out infinite;
+    }
+}
+
+/* IMAGE ZOOM */
+
+.wv-animated-card img {
+    transition: transform 0.5s ease;
+}
+
+@media (hover: hover) {
+    .wv-animated-card:hover img {
+        transform: scale(1.04);
+    }
+}
+
+/* FLOATING ICONS */
+
+.wv-animated-card .wv-floating-icon {
+    display: inline-block;
+    animation: wvIconFloat 2.5s ease-in-out infinite;
+}
+
+@keyframes wvIconFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .wv-animated-card {
+        animation: none;
+        border-radius: 22px;
+    }
+
+    .wv-animated-card img {
+        max-width: 100%;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .wv-animated-card,
+    .wv-animated-card::before,
+    .wv-animated-card img,
+    .wv-floating-icon {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* ==========================================
+   WANDERVISTA - FLOATING PACKAGE DETAIL CARDS
+   APPLIES TO ALL NINE PACKAGES
+========================================== */
+
+/* SHARED CARD STYLING */
+
+.package-detail-page .detail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
+}
+
+.package-detail-page .detail-card {
+    --card-bg: #ffffff;
+    --card-glow: #00bcd4;
+    --card-heading: #084c61;
+
+    position: relative;
+    isolation: isolate;
+    min-width: 0;
+    overflow: hidden;
+
+    background: var(--card-bg);
+    border: 2px solid transparent;
+    border-radius: 24px;
+    padding: 30px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+
+    animation: detailCardFloat 5s ease-in-out infinite;
+
+    transition:
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+/* SIX DIFFERENT CARD COLORS */
+
+.package-detail-page .detail-hotel {
+    --card-bg: #e0f7fa;
+    --card-glow: #00acc1;
+    --card-heading: #006978;
+}
+
+.package-detail-page .detail-car {
+    --card-bg: #fff0d9;
+    --card-glow: #f59e0b;
+    --card-heading: #9a5700;
+}
+
+.package-detail-page .detail-bus {
+    --card-bg: #eee4ff;
+    --card-glow: #9561e8;
+    --card-heading: #6840a3;
+}
+
+.package-detail-page .detail-sightseeing {
+    --card-bg: #e1f8e9;
+    --card-glow: #22a967;
+    --card-heading: #187446;
+}
+
+.package-detail-page .detail-inclusions {
+    --card-bg: #ffe5ef;
+    --card-glow: #ec4899;
+    --card-heading: #a72563;
+}
+
+.package-detail-page .detail-charges {
+    --card-bg: #e4eeff;
+    --card-glow: #477fe8;
+    --card-heading: #2856a9;
+}
+
+/* FLOATING ANIMATION */
+
+@keyframes detailCardFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+/* DIFFERENT TIMINGS FOR EACH CARD */
+
+.package-detail-page .detail-card:nth-child(2) {
+    animation-delay: -1s;
+}
+
+.package-detail-page .detail-card:nth-child(3) {
+    animation-delay: -2s;
+}
+
+.package-detail-page .detail-card:nth-child(4) {
+    animation-delay: -3s;
+}
+
+.package-detail-page .detail-card:nth-child(5) {
+    animation-delay: -4s;
+}
+
+.package-detail-page .detail-card:nth-child(6) {
+    animation-delay: -2.5s;
+}
+
+/* ANIMATED GLOW BORDER */
+
+.package-detail-page .detail-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid var(--card-glow);
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+@keyframes detailBorderGlow {
+    0%, 100% {
+        opacity: 0.4;
+        box-shadow: inset 0 0 8px var(--card-glow);
+    }
+
+    50% {
+        opacity: 1;
+        box-shadow:
+            inset 0 0 15px var(--card-glow),
+            0 0 22px var(--card-glow);
+    }
+}
+
+/* DESKTOP HOVER */
+
+@media (hover: hover) {
+    .package-detail-page .detail-card:hover {
+        animation-play-state: paused;
+        transform: translateY(-12px) scale(1.02);
+        border-color: var(--card-glow);
+
+        box-shadow:
+            0 20px 45px rgba(0, 0, 0, 0.12),
+            0 0 25px var(--card-glow);
+    }
+
+    .package-detail-page .detail-card:hover::before {
+        animation: detailBorderGlow 1.8s ease-in-out infinite;
+    }
+}
+
+/* HEADING COLORS */
+
+.package-detail-page .detail-card h2 {
+    color: var(--card-heading);
+    font-size: 22px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* CONTENT COLORS */
+
+.package-detail-page .detail-card p,
+.package-detail-page .detail-card li {
+    color: var(--card-heading);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* FLOATING ICONS */
+
+.package-detail-page .detail-icon {
+    display: inline-block;
+    flex-shrink: 0;
+    animation: detailIconFloat 2.5s ease-in-out infinite;
+}
+
+@keyframes detailIconFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-5px) rotate(7deg);
+    }
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .package-detail-page .detail-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .package-detail-page .detail-card {
+        padding: 24px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .package-detail-page .detail-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .package-detail-page .detail-card {
+        padding: 22px;
+        border-radius: 20px;
+        animation: none;
+    }
+
+    .package-detail-page .detail-card h2 {
+        font-size: 20px;
+    }
+
+    .package-detail-page .detail-card p,
+    .package-detail-page .detail-card li {
+        font-size: 15px;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .package-detail-page .detail-card,
+    .package-detail-page .detail-card::before,
+    .package-detail-page .detail-icon {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* =====================================
+   WANDERVISTA SERVICE DETAILS
+===================================== */
+
+.service-detail-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 45px 20px 80px;
+}
+
+.service-detail-back {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #0a7167;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.service-detail-hero {
+    text-align: center;
+    padding: 55px 25px;
+    border-radius: 28px;
+    background: linear-gradient(135deg, #e8f7fa, #f4edff);
+}
+
+.service-detail-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 95px;
+    height: 95px;
+    border-radius: 25px;
+    background: white;
+    font-size: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    animation: serviceIconFloat 3s ease-in-out infinite;
+}
+
+.service-detail-hero h1 {
+    margin: 20px 0 10px;
+    font-size: clamp(30px, 4vw, 46px);
+    color: #092f38;
+}
+
+.service-detail-hero h3 {
+    color: #0c776f;
+    margin-bottom: 15px;
+}
+
+.service-detail-hero p {
+    max-width: 720px;
+    margin: auto;
+    color: #53656b;
+    line-height: 1.8;
+}
+
+.service-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 45px;
+    align-items: stretch;
+}
+
+.service-info-card {
+    position: relative;
+    min-width: 0;
+    padding: 30px;
+    border-radius: 24px;
+    border: 2px solid transparent;
+    background: var(--service-bg);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+    animation: serviceCardFloat 5s ease-in-out infinite;
+    transition: box-shadow .3s ease, border-color .3s ease;
+}
+
+.service-options {
+    --service-bg: #e0f7fa;
+    --service-glow: #00acc1;
+    --service-text: #006978;
+}
+
+.service-support {
+    --service-bg: #e9f8ed;
+    --service-glow: #28a765;
+    --service-text: #176a40;
+    animation-delay: -1.5s;
+}
+
+.service-charges {
+    --service-bg: #fff0d9;
+    --service-glow: #e6a328;
+    --service-text: #955b00;
+    animation-delay: -3s;
+}
+
+.service-info-card h2 {
+    color: var(--service-text);
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+.service-info-card p,
+.service-info-card li {
+    color: var(--service-text);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.service-info-card ul {
+    padding-left: 20px;
+}
+
+@keyframes serviceCardFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-9px); }
+}
+
+@keyframes serviceIconFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@media (hover: hover) {
+    .service-info-card:hover {
+        animation-play-state: paused;
+        border-color: var(--service-glow);
+        box-shadow:
+            0 18px 45px rgba(0,0,0,0.12),
+            0 0 25px var(--service-glow);
+    }
+}
+
+.service-detail-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.service-detail-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 30px;
+    background: #dda83e;
+    color: #10272b;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.service-detail-btn.secondary {
+    background: #dff5f0;
+    color: #086e62;
+}
+
+.service-detail-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.service-detail-note {
+    margin-top: 30px;
+    text-align: center;
+    color: #68777d;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .service-detail-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .service-detail-page {
+        padding: 25px 15px 50px;
+    }
+
+    .service-detail-hero {
+        padding: 35px 20px;
+    }
+
+    .service-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .service-info-card {
+        padding: 22px;
+        animation: none;
+    }
+
+    .service-detail-btn {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .service-detail-icon,
+    .service-info-card {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* ========================================
+   WANDERVISTA FLIGHT DETAILS PAGE
+======================================== */
+
+.wv-flight-page {
+    max-width: 1300px;
+    margin: auto;
+    padding: 45px 20px 80px;
+}
+
+.wv-flight-back {
+    display: inline-block;
+    color: #087566;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+
+.wv-flight-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.wv-flight-header span {
+    color: #0d8b86;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.wv-flight-header h1 {
+    color: #092f38;
+    font-size: clamp(30px, 4vw, 48px);
+    margin: 12px 0;
+}
+
+.wv-flight-header p {
+    color: #65757b;
+    font-size: 17px;
+}
+
+.wv-flight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.wv-flight-card {
+    --flight-bg: #e6f5ff;
+    --flight-glow: #32a6e5;
+
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 25px;
+    background: var(--flight-bg);
+    border: 2px solid transparent;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+
+    animation: wvFlightFloat 5s ease-in-out infinite;
+
+    transition:
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+.wv-flight-color-1 {
+    --flight-bg: #e6f5ff;
+    --flight-glow: #32a6e5;
+}
+
+.wv-flight-color-2 {
+    --flight-bg: #fff1d5;
+    --flight-glow: #e6a52d;
+    animation-delay: -1.5s;
+}
+
+.wv-flight-color-3 {
+    --flight-bg: #e8faef;
+    --flight-glow: #28a765;
+    animation-delay: -3s;
+}
+
+@keyframes wvFlightFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.wv-flight-image {
+    height: 210px;
+    overflow: hidden;
+}
+
+.wv-flight-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.wv-flight-content {
+    padding: 25px;
+}
+
+.wv-flight-content h2 {
+    font-size: 23px;
+    color: #103c46;
+    margin-bottom: 25px;
+}
+
+.wv-flight-route {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 12px;
+}
+
+.wv-flight-route div {
+    min-width: 0;
+}
+
+.wv-flight-route span {
+    display: block;
+    color: #65757b;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.wv-flight-route strong {
+    display: block;
+    color: #143d47;
+    font-size: 17px;
+    overflow-wrap: anywhere;
+}
+
+.wv-flight-route p {
+    color: #55696f;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.wv-flight-arrow {
+    color: #0d8b86;
+    font-size: 25px;
+}
+
+.wv-flight-duration {
+    margin-top: 20px;
+    color: #526970;
+}
+
+.wv-flight-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.wv-flight-bottom small {
+    color: #68777d;
+}
+
+.wv-flight-bottom h3 {
+    color: #087a61;
+    font-size: 23px;
+}
+
+.wv-flight-book {
+    display: inline-block;
+    background: #dda83e;
+    color: #10272b;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 13px 20px;
+    border-radius: 30px;
+}
+
+.wv-flight-notice {
+    margin-top: 40px;
+    text-align: center;
+    color: #65757b;
+    line-height: 1.7;
+}
+
+/* HOVER GLOW */
+@media (hover: hover) {
+    .wv-flight-card:hover {
+        animation-play-state: paused;
+        border-color: var(--flight-glow);
+        box-shadow:
+            0 18px 45px rgba(0,0,0,0.12),
+            0 0 25px var(--flight-glow);
+    }
+
+    .wv-flight-card:hover img {
+        transform: scale(1.07);
+    }
+}
+
+/* TABLET */
+@media (max-width: 950px) {
+    .wv-flight-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+    .wv-flight-page {
+        padding: 25px 15px 50px;
+    }
+
+    .wv-flight-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .wv-flight-card {
+        animation: none;
+    }
+
+    .wv-flight-content {
+        padding: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wv-flight-card,
+    .wv-flight-image img {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+.flight-passenger-box {
+    margin-top: 22px;
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 16px;
+}
+
+.flight-passenger-box label {
+    display: block;
+    font-weight: 700;
+    color: #123d46;
+    margin-bottom: 10px;
+}
+
+.flight-passengers {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b8d5d8;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.flight-total {
+    margin-top: 15px;
+    color: #087a61;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+@media (max-width: 600px) {
+    .flight-passenger-box {
+        padding: 14px;
+    }
+}
+
+/* ========================================
+   WANDERVISTA HOTEL DETAILS
+======================================== */
+
+.wv-hotel-page {
+    max-width: 1300px;
+    margin: auto;
+    padding: 45px 20px 80px;
+}
+
+.wv-hotel-back {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #087566;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.wv-hotel-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.wv-hotel-header span {
+    color: #0d8b86;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.wv-hotel-header h1 {
+    color: #092f38;
+    font-size: clamp(30px, 4vw, 48px);
+    margin: 12px 0;
+}
+
+.wv-hotel-header p {
+    color: #65757b;
+    font-size: 17px;
+}
+
+.wv-hotel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.wv-hotel-card {
+    --hotel-bg: #e6f5ff;
+    --hotel-glow: #32a6e5;
+
+    min-width: 0;
+    overflow: hidden;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    background: var(--hotel-bg);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    animation: wvHotelFloat 5s ease-in-out infinite;
+    transition: border-color .3s ease, box-shadow .3s ease;
+}
+
+.wv-hotel-color-1 {
+    --hotel-bg: #e6f5ff;
+    --hotel-glow: #32a6e5;
+}
+
+.wv-hotel-color-2 {
+    --hotel-bg: #fff1d5;
+    --hotel-glow: #e6a52d;
+    animation-delay: -1.5s;
+}
+
+.wv-hotel-color-3 {
+    --hotel-bg: #e8faef;
+    --hotel-glow: #28a765;
+    animation-delay: -3s;
+}
+
+@keyframes wvHotelFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.wv-hotel-image {
+    height: 210px;
+    overflow: hidden;
+}
+
+.wv-hotel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.wv-hotel-content {
+    padding: 25px;
+}
+
+.wv-hotel-location {
+    color: #087566;
+    font-weight: 700;
+}
+
+.wv-hotel-content h2 {
+    color: #103c46;
+    margin: 12px 0 18px;
+    font-size: 24px;
+}
+
+.wv-hotel-content p {
+    color: #526970;
+    line-height: 1.7;
+}
+
+.wv-hotel-times {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 18px 0;
+    color: #536970;
+}
+
+.wv-hotel-calculator {
+    padding: 18px;
+    background: rgba(255,255,255,0.65);
+    border-radius: 16px;
+}
+
+.wv-hotel-calculator label {
+    display: block;
+    margin-bottom: 14px;
+    font-weight: 700;
+    color: #143d47;
+}
+
+.wv-hotel-calculator select {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #b8d5d8;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.wv-hotel-total {
+    margin-top: 15px;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.wv-hotel-total strong {
+    display: block;
+    color: #087a61;
+    font-size: 25px;
+}
+
+.wv-hotel-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.wv-hotel-bottom small {
+    color: #68777d;
+}
+
+.wv-hotel-bottom h3 {
+    color: #087a61;
+    font-size: 23px;
+}
+
+.wv-hotel-book {
+    display: inline-block;
+    background: #dda83e;
+    color: #10272b;
+    padding: 13px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.wv-hotel-notice {
+    margin-top: 40px;
+    text-align: center;
+    color: #65757b;
+    line-height: 1.7;
+}
+
+@media (hover: hover) {
+    .wv-hotel-card:hover {
+        animation-play-state: paused;
+        border-color: var(--hotel-glow);
+        box-shadow:
+            0 18px 45px rgba(0,0,0,0.12),
+            0 0 25px var(--hotel-glow);
+    }
+
+    .wv-hotel-card:hover img {
+        transform: scale(1.06);
+    }
+}
+
+@media (max-width: 950px) {
+    .wv-hotel-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .wv-hotel-page {
+        padding: 25px 15px 50px;
+    }
+
+    .wv-hotel-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .wv-hotel-card {
+        animation: none;
+    }
+
+    .wv-hotel-content {
+        padding: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wv-hotel-card,
+    .wv-hotel-image img {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+/* ===================================
+   PRIVACY & TERMS - REMOVE EXTRA GAPS
+=================================== */
+
+.legal-card {
+    display: block;
+    height: auto;
+    min-height: 0;
+}
+
+/* Remove large spacing between sections */
+.legal-card .legal-section {
+    margin-top: 0 !important;
+    margin-bottom: 24px !important;
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 0;
+    height: auto;
+}
+
+/* Heading spacing */
+.legal-card .legal-heading {
+    margin-top: 0 !important;
+    margin-bottom: 16px !important;
+}
+
+/* Paragraph spacing */
+.legal-card .legal-section p {
+    margin-top: 0;
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .legal-card .legal-section {
+        margin-bottom: 18px !important;
+    }
+
+    .legal-card .legal-heading {
+        margin-bottom: 12px !important;
+    }
+}
