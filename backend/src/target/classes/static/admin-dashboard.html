@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>WanderVista Admin Dashboard</title>
+
+    <link rel="stylesheet"
+          href="admin-dashboard.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2>🌍 WanderVista</h2>
+        <p>Admin Panel</p>
+
+        <a href="admin-dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="#bookings">
+            Customer Bookings
+        </a>
+    </aside>
+
+    <main class="main-content">
+
+        <h1>Admin Dashboard</h1>
+        <p>Manage WanderVista booking requests</p>
+
+        <section class="stats">
+
+            <div class="stat-card blue">
+                <h3>Total Bookings</h3>
+                <h2 id="totalBookings">0</h2>
+            </div>
+
+            <div class="stat-card yellow">
+                <h3>Pending Bookings</h3>
+                <h2 id="pendingBookings">0</h2>
+            </div>
+
+            <div class="stat-card green">
+                <h3>Accepted Bookings</h3>
+                <h2 id="acceptedBookings">0</h2>
+            </div>
+
+            <div class="stat-card red">
+                <h3>Cancelled Bookings</h3>
+                <h2 id="cancelledBookings">0</h2>
+            </div>
+
+        </section>
+
+        <section id="bookings" class="booking-section">
+
+            <h2>Customer Booking Details</h2>
+
+            <button id="refreshBtn">
+                Refresh Bookings
+            </button>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Destination</th>
+                        <th>Travel Date</th>
+                        <th>Travelers</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+
+                    <tbody id="bookingTable">
+                    <tr>
+                        <td colspan="8">
+                            Loading bookings...
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="admin-dashboard.js"></script>
+
+</body>
+</html>
